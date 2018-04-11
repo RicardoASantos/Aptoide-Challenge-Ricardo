@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+p, h3{
+  font-family: Roboto;
+}
+
+
+.box-title{
+  width: 28%;
+  max-width: 350px;
+  border: solid #D5D5D5 1px;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 20px 0 10px 20px;
+  background-color: #FFFFFF;
+  margin-bottom: -1px;
+  position: relative;
+  font-size: 1.1em;
+}
+
+.main-box {
+  width: 80vw;
+  max-width: 1000px;
+  height: 250px;
+  border: solid #D5D5D5 1px;
+  border-radius: 0 8px 8px 8px;
+
+  .uploadzone{
+    width: 20%;
+    height: 220px;
+    background: #EBEBEC;
+    margin: 15px 0 0 2.5%;
+    border-radius:8px;
+
+    i, p, h3{
+      text-align: center;
+      width: 100%;
+    }
+
+    i{
+      font-size: 2.7em;
+      margin-top: 65px;
+      color: #BCBCBC;
+    }
+
+    p{
+      font-size: 0.8em;
+      color: #BCBCBC;
+
+    }
+
+    h3{
+      font-size: 1.1em;
+      margin:10px 0 10px 0;
+    }
+
+    input[type=file] {
+      width: 16vw;
+      max-width: 200px;
+      height:220px;
+      opacity: 0;
+      background: #000000;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+
+  .uploadzone:hover{
+    background: #CECECE;
+
+    p,h3,i{
+      color: white;
+    }
+
+  }
+
+  .left, .right{
+    width: 5%;
+    height: 220px;
+    float: right;
+
+    i{
+      width: 100%;
+      line-height: 240px;
+      text-align: center;
+      font-size: 2.5em;
+      cursor: pointer;
+      color:#FF6124;
+    }
+
+    .bounce:hover {
+	    -moz-animation: bounce 1s infinite;
+      -webkit-animation: bounce 1s infinite;
+      animation: bounce 1s infinite;
+    }
+    @-moz-keyframes bounce {
+      0%, 100% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      33% {
+        -moz-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+      66% {
+        -moz-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+      }
+    }
+    @-webkit-keyframes bounce {
+      0%, 100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      33% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+      66% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+      }
+    }
+    @keyframes bounce {
+      0%, 100% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      33% {
+        -moz-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+      }
+      66% {
+        -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+      }
+    }
+
+  }
+
+  .scroller {
+    width: 65%;
+    height: 240px;
+    overflow-x: scroll;
+    float: right;
+
+    tbody{
+
+      height: 95%;
+      overflow-x: auto;
+      white-space: nowrap;
+      float: none;
+
+      .media{
+        float: none;
+        margin-top: 15px;
+        padding: 0;
+        margin-right: 10px;
+        display: inline-block;
+        .btn-xs{
+          float: right;
+          position: relative;
+          margin:1.5vw 0.75vw -10px -110px;
+
+        }
+        .btn-danger{
+          color:#FF6124;
+          background: #FFFFFF;
+          border: none;
+          height: 3.5em;
+          width: 3.5em;
+          border-radius: 2em;
+
+          -webkit-transition: all 1s; /* Safari */
+          transition: all 1s;
+
+
+          span:before{
+            padding-left: 0.5em;
+            font-size: 2em;
+            line-height: 1.25em;
+          }
+        }
+        .btn-danger:hover{
+          transform: rotate(360deg);
+          color:#FFFFFF;
+          background: #FF6124;
+        }
+
+        .frame{
+          overflow: hidden;
+          border-radius: 8px;
+          img{
+            height: 220px;
+          }
+        }
+      }
+    }
+  }
+}

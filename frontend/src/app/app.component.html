@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <form *ngIf="news" method="POST" class="operator-form" action="" accept-charset="UTF-8" role="form">
+        <h3 class="box-title">Manage Screenshots</h3>
+        <div class="main-box">
+
+          <div class="uploadzone dropzone">
+            <i class="fa fa-image"></i>
+            <h3>ADD NEW</h3>
+            <p>Min. 320px X320px<br>Máx. 2MB</p>
+            <input type="file" ng2FileSelect [uploader]="uploader" multiple  accept="image/*"/>
+          </div>
+
+          <div *ngIf="uploader_errors.length" class="alert alert-danger">
+              <ul>
+                  <li *ngFor="let uploader_error of uploader_errors">
+                      {{ uploader_error }}
+                  </li>
+              </ul>
+          </div>
+
+          <div class="right">
+            <i class="fa fa-angle-right bounce"></i>
+          </div>
+
+          <div class="scroller">
+            <tbody>
+            <tr *ngFor="let item of uploader.queue" class="media">
+              <button type="button" class="btn btn-danger btn-xs"
+                  (click)="item.remove()" [disabled]="item.isUploading || item.isSuccess" >
+                  <span class="fa fa-close"></span>
+              </button>
+              <div class="frame">
+                  <img src="" imgPreview [image]="item?._file" class="media-object" />
+              </div>
+            </tr>
+            </tbody>
+          </div>
+
+          <div class="left">
+            <i class="fa fa-angle-left bounce"></i>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
