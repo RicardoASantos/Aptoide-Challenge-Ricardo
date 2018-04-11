@@ -1,4 +1,4 @@
-# Simple Laravel & AngularJS Web App With Image Uploader Support
+# Aptoide Challenge - Ricardo Santos
 
 This application uses:
 
